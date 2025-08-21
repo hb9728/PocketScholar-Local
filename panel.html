@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Breeze — Offline Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="bx-header">
+      <div class="bx-title">Breeze — Offline Reader</div>
+      <div class="bx-url" id="pageUrl"></div>
+    </header>
+
+    <section class="bx-controls">
+      <div class="bx-modes" id="modeGroup">
+        <button data-mode="tldr" class="mode active">TL;DR</button>
+        <button data-mode="eli5" class="mode">ELI5</button>
+        <button data-mode="hs" class="mode">18 y/o</button>
+        <button data-mode="masters" class="mode">Master’s</button>
+        <button data-mode="phd" class="mode">PhD</button>
+      </div>
+
+      <div class="bx-row">
+        <label>Length:</label>
+        <input id="lengthRange" type="range" min="128" max="512" step="64" value="256" />
+        <span id="lengthValue">256</span> tokens
+      </div>
+
+      <div class="bx-row">
+        <label><input id="bulletsToggle" type="checkbox" checked /> Bulleted output</label>
+        <label><input id="quotesToggle" type="checkbox" /> Include short quotes</label>
+      </div>
+
+      <div class="bx-actions">
+        <button id="summarizeBtn">Summarize</button>
+        <button id="copyBtn" title="Copy output">Copy</button>
+      </div>
+    </section>
+
+    <section class="bx-meta">
+      <div class="bx-pagetitle" id="pageTitle">—</div>
+      <div class="bx-note" id="sourceHint">Using local model via Ollama (localhost:11434)</div>
+      <div class="bx-note small" id="selectionNote" hidden>Summarizing <strong>selection</strong> (right‑click toggled)</div>
+    </section>
+
+    <section class="bx-output">
+      <pre id="output" class="bx-pre">(output will appear here)</pre>
+    </section>
+
+    <script type="module" src="utils.js"></script>
+    <script type="module" src="summarize.js"></script>
+    <script type="module" src="panel.js"></script>
+  </body>
+</html>

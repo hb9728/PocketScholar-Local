@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Breeze — Offline Reader",
+  "description": "Side-panel summarizer with ELI5 ↔ PhD modes using a local Ollama model.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Open Breeze — Offline Reader"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "http://localhost:11434/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "panel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
