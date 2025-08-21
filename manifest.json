@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Breeze — Offline Reader",
+  "name": "PocketScholar-Local",
   "description": "Side-panel summarizer with ELI5 ↔ PhD modes using a local Ollama model.",
   "version": "0.1.0",
   "action": {
-    "default_title": "Open Breeze — Offline Reader"
+    "default_title": "Open PocketScholar-Local"
   },
   "permissions": [
     "activeTab",

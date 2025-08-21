@@ -100,7 +100,7 @@ async function runSummary(payload) {
     if (keys.length > 100) delete breezeCache[keys[0]];
     await chrome.storage.local.set({ breezeCache });
   } catch (e) {
-    setOutput(`Error: ${e.message}\n\nIs Ollama running on http://localhost:11434 ?\nModel pulled: llama3.1:8b-instruct-q4_0`);
+    setOutput(`PocketScholar Error: ${e.message}\n\nIs Ollama running on http://localhost:11434 ?\nModel pulled: llama3.1:8b-instruct-q4_0`);
   } finally {
     setBusy(false);
   }
