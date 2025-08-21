@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="#0B0D10"/>
+
+  <!-- Glasses: two circles + bridge -->
+  <circle cx="34" cy="64" r="20" stroke="#6AA6FF" stroke-width="8" fill="none"/>
+  <circle cx="94" cy="64" r="20" stroke="#6AA6FF" stroke-width="8" fill="none"/>
+  <rect x="54" y="60" width="20" height="8" fill="#6AA6FF" rx="4"/>
+</svg>
